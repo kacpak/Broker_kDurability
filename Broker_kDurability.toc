@@ -2,7 +2,7 @@
 ## Title: Broker |cff69ccf0k|cffe1a500Durability|r
 ## Notes: Shows how damaged your equipement is
 ## Author: Mateusz Kasprzak
-## Version: 1.0
+## Version: 1.0.1
 
 ## X-License: Apache 2.0
 ## X-Category: Miscellaneous

@@ -1,3 +1,22 @@
+--[[
+Name: Broker kDurability
+Description: Shows how damaged your equipement is
+
+Copyright 2008 Quaiche of Dragonblight
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+]]
+
 local ldb = LibStub:GetLibrary("LibDataBroker-1.1")
 local eqDurability
 local averageDurabilityPercentage = 0
@@ -104,8 +123,6 @@ local function OnEvent()
 end
 
 local f = CreateFrame("Frame")
-f:SetScript("OnEvent", function(self, event, ...) if self[event] then return self[event](self, event, ...) end end)
+f:SetScript("OnEvent", OnEvent)
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
-f.PLAYER_ENTERING_WORLD = OnEvent
 f:RegisterEvent("UPDATE_INVENTORY_DURABILITY")
-f.UPDATE_INVENTORY_DURABILITY = OnEvent
